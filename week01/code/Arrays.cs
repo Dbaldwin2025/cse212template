@@ -13,15 +13,21 @@ public static class Arrays
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
        // double[] multiple = {7, 14, 21, 28, 35};
+
+       // I will make a list which could adjust if needed then convert it to an array
+       // I will need a loop to itterate through possible numbers and add them if they match to the list
+       // I will need to limit my results by the legth specified in the 2nd 
+       // I will then return the array 
+
         List<double> multipleList = [];
         
-        for (double i = 0.5; i < 100; i++) {
+        for (double i = 1.0; i < 100; i++) {
             if (i % number == 0 && multipleList.Count < length) {
                 multipleList.Add(i);
-                Console.Write(" " + i);
+                Console.Write(" " + i + " ");
             }
         }
-        Console.Write(multipleList[1]);
+   
         double[] multiples = multipleList.ToArray();
        
         return multiples;
