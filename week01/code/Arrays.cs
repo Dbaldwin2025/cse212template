@@ -12,10 +12,21 @@ public static class Arrays
         // Remember: Using comments in your program, write down your process for solving this problem
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
-
-        return []; // replace this return statement with your own
+       // double[] multiple = {7, 14, 21, 28, 35};
+        List<double> multipleList = [];
+        
+        for (double i = 0.5; i < 100; i++) {
+            if (i % number == 0 && multipleList.Count < length) {
+                multipleList.Add(i);
+                Console.Write(" " + i);
+            }
+        }
+        Console.Write(multipleList[1]);
+        double[] multiples = multipleList.ToArray();
+       
+        return multiples;
     }
-
+    
     /// <summary>
     /// Rotate the 'data' to the right by the 'amount'.  For example, if the data is 
     /// List<int>{1, 2, 3, 4, 5, 6, 7, 8, 9} and an amount is 3 then the list after the function runs should be 
