@@ -56,7 +56,12 @@ public static class Arrays
         // Remember: Using comments in your program, write down your process for solving this problem
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person
-     
+
+        // need to create a 2nd temporary array to store rotated numbers
+        //need to run 2 for loops: 1st loop is to transfer values into the temp array
+        // as we are getting the data we shift the index according to value or amount stated
+        // we then need to repopulate the data back into the data array
+        
 
         int[] last = new int[data.Count];
         int numbr = data.Count -amount;
