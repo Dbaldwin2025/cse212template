@@ -21,9 +21,16 @@ public static class Arrays
 
         List<double> multipleList = [];
         
-        for (double i = 1.0; i < 100; i++) {
+        for (double i = 0.5; i < 100; i += 0.5) {
             if (i % number == 0 && multipleList.Count < length) {
+                if (number < 0) {
+                   
+                    multipleList.Add(i* -1);
+                } 
+                else 
+                {
                 multipleList.Add(i);
+                }
                 Console.Write(" " + i + " ");
             }
         }
