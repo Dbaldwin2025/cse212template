@@ -58,20 +58,20 @@ public static class Arrays
         // be implemented by another person
 
         // need to create a 2nd temporary array to store rotated numbers
-        //need to run 2 for loops: 1st loop is to transfer values into the temp array
-        // as we are getting the data we shift the index according to value or amount stated
-        // we then need to repopulate the data back into the data array
-        
+        // need to run 2 for loops: 1st loop is to transfer values into a temporary array
+        // as we are getting the data we shift the index correctly according to value or amount stated
+        // we then need to repopulate the data back into the data array with the 2nd for loop
 
-        int[] last = new int[data.Count];
-        int numbr = data.Count -amount;
+
+        int[] tempArray = new int[data.Count];
+        int shiftIndex = data.Count -amount;
         for (int i = 0 ;i < data.Count; i++) {
-            last[i] = data[(i + numbr)% data.Count];
-            //Console.Write(" " +last[i] +" ");
+            tempArray[i] = data[(i + shiftIndex)% data.Count];
+            //Console.Write(" " + tempArray[i] + " ");
         }
         for (int i =0; i < data.Count; i++) {
-            data[i] = last[i];
-            Console.Write(" " + data[i] +" ");
+            data[i] = tempArray[i];
+            Console.Write(" " + data[i] + " ");
         }
 
 
