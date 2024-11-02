@@ -1,3 +1,6 @@
+using System.Globalization;
+using Microsoft.VisualStudio.TestPlatform.ObjectModel;
+
 public static class Arrays
 {
     /// <summary>
@@ -52,6 +55,20 @@ public static class Arrays
         // TODO Problem 2 Start
         // Remember: Using comments in your program, write down your process for solving this problem
         // step by step before you write the code. The plan should be clear enough that it could
-        // be implemented by another person.
+        // be implemented by another person
+     
+
+        int[] last = new int[data.Count];
+        int numbr = data.Count -amount;
+        for (int i = 0 ;i < data.Count; i++) {
+            last[i] = data[(i + numbr)% data.Count];
+            //Console.Write(" " +last[i] +" ");
+        }
+        for (int i =0; i < data.Count; i++) {
+            data[i] = last[i];
+            Console.Write(" " + data[i] +" ");
+        }
+
+
     }
 }
